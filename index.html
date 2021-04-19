@@ -19,11 +19,13 @@
 
 	<style>
 		body {
+			
 			font-family: 'Montserrat', sans-serif;
 			margin:0;
 			padding:0;
 			overflow: hidden;
 			display: flex;
+			flex-direction: column;
 			align-items: center;
 			justify-content: center;
 			background-color: #f8ede3;
@@ -31,6 +33,7 @@
 		canvas {
 			margin:auto;
 			z-index: -1;
+			
 			
 		} 
 
@@ -85,7 +88,9 @@
 	</style>
 </head>
 <body>
+	<h1>Raycasting</h1>
 	<div>
+		
 	<span class="info-comp">WASD for desktop/laptop</span>
 	<button ontouchstart="moveTo(1,'up');" ontouchend="moveTo(0,'up');">UP</button>
 	<button ontouchstart="moveTo(-1,'left');" ontouchend="moveTo(0,'left');">LEFT</button>
