@@ -31,8 +31,9 @@
 			background-color: #f8ede3;
 		}
 		canvas {
-			margin:auto;
+			
 			z-index: -1;
+			
 			
 			
 		} 
@@ -81,22 +82,26 @@
 		.info-comp{
 			font-size: 10px;
 			display: block;
-			color: white;
+			color: black;
+			display: none;
 			
+		}
+
+		.mobile-controls {
+			display: none;
 		}
 
 	</style>
 </head>
 <body>
 	<h1>Raycasting</h1>
-	<div>
-		
-	<span class="info-comp">WASD for desktop/laptop</span>
+	<div class="mobile-controls">
 	<button ontouchstart="moveTo(1,'up');" ontouchend="moveTo(0,'up');">UP</button>
 	<button ontouchstart="moveTo(-1,'left');" ontouchend="moveTo(0,'left');">LEFT</button>
 	<button ontouchstart="moveTo(1,'right');" ontouchend="moveTo(0,'right');">RIGHT</button>
 	<button ontouchstart="moveTo(-1,'down');" ontouchend="moveTo(0,'down');">DOWN</button>
 	</div>
+	<span class="info-comp">WASD to move</span>
 	<footer class="footer__name">MADE BY KIAN VILLENO</footer>
 </body>
 </html>
