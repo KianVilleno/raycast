@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+	<title>Raycast</title>
+
+	<script src="libraries/p5.js"></script>
+	<script src="libraries/p5.dom.js"></script>
+	<script src="libraries/p5.sound.js"></script>
+	<script src="matrix.js"></script>
+	<script src="raycast.js"></script>
+	<script src="player.js"></script>
+	<script src="sketch.js"></script>
+	<script src="pic.js"></script>
+	<script src="event.js"></script>
+
+	<style>
+		body {
+			font-family: 'Montserrat', sans-serif;
+			margin:0;
+			padding:0;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #f8ede3;
+		}
+		canvas {
+			margin:auto;
+			z-index: -1;
+			
+		} 
+
+		div {
+			position: absolute;
+			z-index: 1;
+			bottom: 25px;
+			text-align: center;
+		}
+		div button{
+			height: 100px;
+			width: 100px;
+			opacity: 0.5;
+			border-radius: 5px;
+			border: none;
+		}
+		* {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
+
+	 
+}
+
+.footer__name {
+			background-color: black;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+			height: 25px;
+			position: absolute;
+			bottom: 0px;
+			font-size: 10px;
+		}
+
+		.info-comp{
+			font-size: 10px;
+			display: block;
+			color: white;
+			
+		}
+
+	</style>
+</head>
+<body>
+	<div>
+	<span class="info-comp">WASD for desktop/laptop</span>
+	<button ontouchstart="moveTo(1,'up');" ontouchend="moveTo(0,'up');">UP</button>
+	<button ontouchstart="moveTo(-1,'left');" ontouchend="moveTo(0,'left');">LEFT</button>
+	<button ontouchstart="moveTo(1,'right');" ontouchend="moveTo(0,'right');">RIGHT</button>
+	<button ontouchstart="moveTo(-1,'down');" ontouchend="moveTo(0,'down');">DOWN</button>
+	</div>
+	<footer class="footer__name">MADE BY KIAN VILLENO</footer>
+</body>
+</html>
